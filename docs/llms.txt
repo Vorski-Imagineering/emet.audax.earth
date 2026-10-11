@@ -15,6 +15,9 @@ EMET was founded by Victor Vorski (Collective Intelligence & AI), Guy Blat (Data
 
 ## Notable articles
 
+- [How agents learn across teams](https://emet.audax.earth/post-how-agents-learn-across-teams.html) — building shared methods, shared meaning and a place for humans and agents to improve collaboration together
+- [Designing agents people can understand](https://emet.audax.earth/post-designing-agents-people-can-understand.html) — a shared framework and template could help teams create useful agent roles quickly, with their purpose, authority and limits clear to everyone involved
+- [Audax Meta-Framework: a shared environment for collaboration](https://emet.audax.earth/post-audax-meta-framework.html) — a conceptual space where humans and agents can develop their ways of working across many tools and technologies
 - [What I Learned This Week: The Guess That Didn't Need to Be One](https://emet.audax.earth/post-guess-that-didnt-need-to-be-one.html) — a lab note on finding out instead of guessing
 - [The Bigger Shift: From Digital Tools to AI Teammates](https://emet.audax.earth/post-ai-teammates.html) — on AI agents joining teams as collaborators and the reinvention of the organisation
 - [A Digital DNA: What an Agent Should Never Forget, and What It Should Let Go?](https://emet.audax.earth/post-digital-dna.html) — on separating an agent's genome, team memory and own experience

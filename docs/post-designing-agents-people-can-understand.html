@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing agents people can understand · EMET</title>
+<meta name="description" content="A shared framework and template could help teams create useful agent roles quickly, with their purpose, authority and limits clear to everyone involved.">
+<meta name="author" content="Victor Vorski">
+<link rel="canonical" href="https://emet.audax.earth/post-designing-agents-people-can-understand.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EMET">
+<meta property="og:title" content="Designing agents people can understand">
+<meta property="og:description" content="A shared framework and template could help teams create useful agent roles quickly, with their purpose, authority and limits clear to everyone involved.">
+<meta property="og:url" content="https://emet.audax.earth/post-designing-agents-people-can-understand.html">
+<meta property="og:image" content="https://emet.audax.earth/blog-designing-agents.jpg">
+<meta property="article:author" content="Victor Vorski">
+<meta property="article:published_time" content="2026-10-11">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Designing agents people can understand">
+<meta name="twitter:description" content="A shared framework and template could help teams create useful agent roles quickly, with their purpose, authority and limits clear to everyone involved.">
+<meta name="twitter:image" content="https://emet.audax.earth/blog-designing-agents.jpg">
+<meta name="theme-color" content="#1c211d">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=sub2">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="EMET home">
+      <img src="logo-inline-dark.png" alt="EMET">
+      <img class="cursor" src="logo-inline-cursor.png" alt="" aria-hidden="true">
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="lab.html">Lab</a>
+      <a href="team.html">Team</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="faq.html">Q&amp;A</a>
+      <a class="cta" href="contact.html">Let&rsquo;s Talk</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="intro">
+  <div class="intro-inner">
+    <p class="mv-label">Essay</p>
+    <h1>Designing agents people can understand</h1>
+    <p class="post-meta">By Victor Vorski &middot; 11 October 2026 &middot; 5 min read</p>
+  </div>
+</section>
+<div class="post-hero-img"><span class="photo-mark"><img src="blog-designing-agents.jpg" alt="A blue diamond outline open at its upper right, with a gold square inside, a green half-circle to its left and three small green squares trailing off to the upper right" width="1200" height="800"></span></div>
+<section class="light-band" style="margin-top:-12vw;padding-top:calc(12vw + 3.5rem)">
+  <article class="prose essay">
+    <p><em>A shared framework and template could help teams create useful agent roles quickly, with their purpose, authority and limits clear to everyone involved.</em></p>
+    <p>Give an agent a name and a goal, and people will fill in the gaps differently. One person imagines an assistant that gathers options. Another expects it to choose among them. A third assumes it can contact colleagues and carry out the choice. The difference is authority, yet all three might describe the same thing as a &ldquo;coordination agent.&rdquo;</p>
+    <p>As teams create more agents, these gaps become consequential. An agent is part of a working relationship. It reads information that people supplied for particular purposes, helps shape decisions, and may act through tools that affect other people. Its design therefore needs to be understandable to those people, as well as to the people who build it.</p>
+    <p>We are exploring an agent design system to make that work repeatable. By system, we mean three connected things: a framework of questions that every agent role should answer, a template that records the answers, and a design process that develops the answers from a rough idea into an operating role. This is work in progress. Its value will depend on testing it with real agent ideas and revising it with the people who would use and be affected by those agents.</p>
+    <h2>Begin with the work</h2>
+    <p>The first question is what people are trying to accomplish. Describe how the work happens today, where it is difficult, and what a useful change would look like. Then ask how much of that change needs an agent.</p>
+    <p>This choice matters. Anthropic distinguishes <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">workflows with predefined paths from agents that select their own steps</a>. OpenAI identifies <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener">complex decisions, hard-to-maintain rules and unstructured information</a> as promising areas for agents. Google&rsquo;s <a href="https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/" target="_blank" rel="noopener">People + AI Guidebook</a> asks whether AI adds distinct value, and whether people want a task automated or their own ability augmented.</p>
+    <p>A design template can make that comparison routine. The answer might be a better human practice, a fixed workflow, a function added to an existing agent, or a new agent with room to choose its approach. A team can reach a useful design sooner when the options are visible at the start.</p>
+    <h2>Make the role legible</h2>
+    <p>We are considering five questions for an early agent sketch:</p>
+    <ol class="stages">
+    <li><strong>Purpose:</strong> What change is the agent meant to help people achieve, and how would they recognise value?</li><li><strong>People:</strong> Who requests its work, collaborates with it, is accountable for it, and may be affected by its output without using it directly?</li><li><strong>Authority:</strong> What may it read, draft, recommend or do? Who authorises consequential actions, and who can correct or stop it?</li><li><strong>Information:</strong> Where does its context come from, how reliable is it, what may it remember, and where may its output travel?</li><li><strong>Evidence:</strong> What would show that it helps, what would show that it causes harm, and what should happen when it gets something wrong?</li></ol>
+    <p>These questions turn a role name into a shared account of the work. They also reveal conflicts. The person who asks for an agent may differ from the person its output describes. A fast summary may help a manager while placing an unwanted burden on contributors whose work is summarised. NIST&rsquo;s <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" target="_blank" rel="noopener">AI Risk Management Framework</a> calls for attention to intended users, affected people, benefits, harms and human oversight. That wider view belongs in an agent&rsquo;s design from the beginning.</p>
+    <p>Authority needs equally plain language. Consider an agent asked to prepare a meeting brief. It could read the shared agenda and project notes, draft a concise summary with links, and highlight unresolved questions. A human chair might decide what to send. If the notes disagree, the agent could flag the disagreement rather than inventing an agreement. The design changes materially if the agent can also invite participants, reveal private notes, or announce decisions.</p>
+    <p>OWASP&rsquo;s <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank" rel="noopener">Excessive Agency guidance</a> shows why a system&rsquo;s available functions, permissions and freedom to act must be considered separately. A clear role can distinguish reading from writing, drafting from sending, and suggesting from deciding. This gives builders concrete boundaries and gives people a way to understand what the agent will actually do.</p>
+    <h2>Design for correction and learning</h2>
+    <p>A useful template should ask for one ordinary case and one case where the agent is uncertain or wrong. When does it ask for clarification? When does it hand work back to a person? How can someone see where an answer came from, edit it, dismiss it or challenge an action?</p>
+    <p>Microsoft&rsquo;s <a href="https://www.microsoft.com/en-us/haxtoolkit/library/" target="_blank" rel="noopener">human&ndash;AI interaction guidelines</a> include clear capability limits, easy correction and explanations of behavior. OpenAI&rsquo;s <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener">agent guide</a> recommends human intervention for sensitive actions and repeated failure. These are design questions as much as implementation checks: they shape the relationship between an agent and the people around it.</p>
+    <p>The same applies to success. Counting tasks completed can show activity, but it says little about whether people were better served. We would want to observe the quality of the result and the cost of getting it: whether people can correct mistakes, whether review work has shifted onto someone else, whether the agent has exposed information or weakened a human capability. Google warns about <a href="https://pair.withgoogle.com/guidebook-v2/chapter/user-needs/" target="_blank" rel="noopener">narrow measures and their downstream effects</a>. Anthropic&rsquo;s <a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener">evaluation guidance</a> also distinguishes an agent&rsquo;s convincing report from the actual outcome in the environment where it acted.</p>
+    <p>Our proposed process would develop the design in stages. An early sketch captures purpose, people, possible actions and open questions. Research then compares possible forms and tests the uncertain parts with affected people. A concrete role card states permissions, decision rights, handoff points and how the agent will be evaluated. After it begins work, a named human reviews feedback, failures and changes to its remit.</p>
+    <p>The template makes each new role easier to start because the team has a shared set of questions. The framework helps people compare roles and understand how they relate. The process gives those answers room to mature as evidence arrives. Together, they could let us create agents rapidly while making each agent&rsquo;s purpose, limits and contribution clear enough for people to work with it thoughtfully.</p>
+    <div class="share">
+      <button class="share-btn share-one" type="button" data-url="https://emet.audax.earth/post-designing-agents-people-can-understand.html" data-title="Designing agents people can understand" aria-label="Share this article"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg><span>Share</span></button>
+    </div>
+    <p class="follow-lab"><a class="follow-lab-link" href="https://www.linkedin.com/company/emet-a-living-lab/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5"/><path d="M7.5 10.5v6M7.5 7.4v.1M11.2 16.5v-6M11.2 13.2c0-1.7 1-2.9 2.6-2.9s2.4 1 2.4 2.7v3.5"/></svg>Follow EMET on LinkedIn for new posts</a></p>
+        <a class="all-link back" href="blog.html">&larr; All posts</a>
+  </article>
+</section>
+</main>
+<section class="invite" aria-label="Get in touch">
+  <h2>Building AI that works with people, not around them?</h2>
+  <a href="contact.html">Let&rsquo;s Talk</a>
+</section>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="aleph-light.png" alt="" aria-hidden="true">
+      <p>A Living Lab for <span style="white-space: nowrap">Human&ndash;AI</span> Collaboration</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lab.html">Lab</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="contact.html">Let&rsquo;s Talk</a></li>
+        <li><a href="mailto:emet.living.lab@gmail.com">Email</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow the Lab</h4>
+      <ul class="social footer-social"><li><a class="social-link" href="https://www.linkedin.com/company/emet-a-living-lab/" target="_blank" rel="noopener" aria-label="EMET on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5"/><path d="M7.5 10.5v6M7.5 7.4v.1M11.2 16.5v-6M11.2 13.2c0-1.7 1-2.9 2.6-2.9s2.4 1 2.4 2.7v3.5"/></svg><span class="social-name">LinkedIn</span></a></li><li><span class="social-link" title="X: link coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5l15 15M19.5 4.5l-15 15"/></svg><span class="social-name">X</span></span></li><li><span class="social-link" title="YouTube: link coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path class="fill" d="M10.2 9.3l4.8 2.7-4.8 2.7z"/></svg><span class="social-name">YouTube</span></span></li></ul>
+      <p class="social-note">X and YouTube coming soon</p>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>&copy; 2026 EMET</span>
+    <span>emet.audax.earth</span>
+  </div>
+</footer>
+<script src="site.js?v=greybar"></script>
+<script>
+document.querySelectorAll('.share-one').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var l = b.querySelector('span'), url = b.dataset.url, title = b.dataset.title;
+    var copied = function () { l.textContent = 'Link copied'; setTimeout(function () { l.textContent = 'Share'; }, 2200); };
+    var copy = function () {
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(copied, function () { prompt('Copy this link:', url); });
+      else prompt('Copy this link:', url);
+    };
+    if (navigator.share) navigator.share({ title: title, url: url }).catch(function (e) { if (e && e.name !== 'AbortError') copy(); });
+    else copy();
+  });
+});
+</script>
+</body>
+</html>

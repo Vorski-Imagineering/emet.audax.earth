@@ -15,6 +15,7 @@ EMET was founded by Victor Vorski (Collective Intelligence & AI), Guy Blat (Data
 
 ## Notable articles
 
+- [Many Fathers, No Mother: What AI Is Missing](https://emet.audax.earth/post-many-fathers-no-mother.html) — a personal essay on empathy without people-pleasing and truth without coldness in AI
 - [Agent in the Loop: The Future of Collaboration](https://emet.audax.earth/post-agent-in-the-loop.html) — on bringing an agent into the loop of human collaboration, rather than keeping humans in the loop of AI
 - [A Greenhouse, Not a Blueprint](https://emet.audax.earth/post-a-greenhouse-not-a-blueprint.html) — creating the conditions for living human–AI organizations
 - [How agents learn across teams](https://emet.audax.earth/post-how-agents-learn-across-teams.html) — building shared methods, shared meaning and a place for humans and agents to improve collaboration together

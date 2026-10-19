@@ -135,18 +135,24 @@
   @media (prefers-reduced-motion: reduce) {
     .mv-quote.anim .mark, .mv-quote.anim .w, .mv-quote.anim figcaption { opacity: 1; transform: none; transition: none; }
   }
-  /* Lead statement at the top of the light section: title words rise in, a clay
-     line draws under "Between Us", then subtitle, text and positioning follow */
+  /* Lead statement at the top of the light section: the title types itself
+     with the logo's blinking cursor, then subtitle, text and positioning fade in */
   .mv-lead { max-width: 52rem; margin: 0 auto; text-align: center; }
   .mv .lead-title {
     font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; color: #1c211d;
     font-size: clamp(2.6rem, 6.5vw, 4.6rem); line-height: 1.05; letter-spacing: -0.01em; margin: 0;
   }
-  .lead-title .between { position: relative; display: inline-block; color: #c1673f; }
-  .lead-title .ink {
-    position: absolute; left: 0; right: 0; bottom: -0.12em; height: 3px; background: #c1673f;
-    transform: scaleX(1); transform-origin: left center;
+  .lead-title .clay { color: #c1673f; }
+  /* typing: every letter is in place from the start (so nothing shifts),
+     JS reveals them one by one with the logo's blinking cursor */
+  .lead-title .ch { visibility: hidden; }
+  .lead-title .ch.on { visibility: visible; }
+  .lead-title .cur { display: inline-block; position: relative; width: 0; height: 0.85em; vertical-align: -0.06em; }
+  .lead-title .cur::after {
+    content: ""; position: absolute; left: 0.04em; top: 0; bottom: 0; width: 0.07em; min-width: 3px;
+    background: #c1673f; animation: blink 1.1s steps(1, end) infinite;
   }
+  .lead-title .cur.gone::after { animation: none; opacity: 0; transition: opacity .6s ease; }
   .lead-sub {
     font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400;
     font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.35; color: #2c332c; margin: 1.6rem 0 0;
@@ -163,20 +169,12 @@
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.02rem, 1.6vw, 1.15rem);
     line-height: 1.7; color: #2c332c; margin: 0;
   }
-  .mv-lead.anim .w, .mv-lead.anim .lead-sub, .mv-lead.anim .lead-body, .mv-lead.anim .lead-position {
-    opacity: 0; transform: translateY(0.7rem);
-    transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);
+  .mv-lead.anim .lead-sub, .mv-lead.anim .lead-body, .mv-lead.anim .lead-position {
+    opacity: 0; transform: translateY(0.6rem); transition: opacity .9s ease, transform .9s ease;
   }
-  .mv-lead.anim .w { display: inline-block; transform: translateY(0.5em); }
-  .mv-lead.anim .ink { transform: scaleX(0); transition: transform .9s cubic-bezier(.6,0,.2,1) 1.05s; }
-  .mv-lead.anim .lead-sub { transition-delay: 1.5s; }
-  .mv-lead.anim .lead-body { transition-delay: 1.85s; }
-  .mv-lead.anim .lead-position { transition-delay: 2.2s; }
-  .mv-lead.anim.in .w, .mv-lead.anim.in .lead-sub, .mv-lead.anim.in .lead-body, .mv-lead.anim.in .lead-position { opacity: 1; transform: none; }
-  .mv-lead.anim.in .ink { transform: scaleX(1); }
-  @media (prefers-reduced-motion: reduce) {
-    .mv-lead.anim .w, .mv-lead.anim .lead-sub, .mv-lead.anim .lead-body, .mv-lead.anim .lead-position, .mv-lead.anim .ink { opacity: 1; transform: none; transition: none; }
-  }
+  .mv-lead.anim .lead-body { transition-delay: .3s; }
+  .mv-lead.anim .lead-position { transition-delay: .6s; }
+  .mv-lead.anim.in .lead-sub, .mv-lead.anim.in .lead-body, .mv-lead.anim.in .lead-position { opacity: 1; transform: none; }
   @media (max-width: 760px) { .mv-lead { text-align: left; } .lead-body, .lead-position { margin-left: 0; } }
   /* Vision to mission as a path: 01 where we are going -> 02 how we get there */
   .mv-path .mv-item { border-top: 0; padding-top: 0; }
@@ -315,7 +313,7 @@
 <section class="mv" aria-label="Vision and mission">
   <div class="mv-inner">
     <div class="mv-lead">
-      <h2 class="lead-title"><span class="w">The</span> <span class="w">Intelligence</span> <span class="between"><span class="w">Between</span> <span class="w">Us.</span><span class="ink" aria-hidden="true"></span></span></h2>
+      <h2 class="lead-title" aria-label="The Intelligence Between Us."><span class="typed">The Intelligence <span class="clay">Between Us.</span></span></h2>
       <p class="lead-sub">Building the next generation of empathic human&ndash;AI teams.</p>
       <p class="lead-body">We help organizations transform how people and AI agents collaborate &mdash; developing shared understanding, collective intelligence, and the capacity to grow together.</p>
       <div class="lead-position">
@@ -492,10 +490,39 @@
 (function () {
   var q = document.querySelector('.mv-lead');
   if (!q || !('IntersectionObserver' in window)) return;
-  q.querySelectorAll('.lead-title .w').forEach(function (w, i) { w.style.transitionDelay = (0.2 + i * 0.16).toFixed(2) + 's'; });
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var title = q.querySelector('.lead-title');
+  // wrap each letter so it can be revealed without moving anything else
+  var chars = [];
+  (function wrap(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) {
+        var frag = document.createDocumentFragment();
+        n.textContent.split('').forEach(function (c) {
+          var sp = document.createElement('span'); sp.className = 'ch'; sp.textContent = c;
+          frag.appendChild(sp); chars.push(sp);
+        });
+        n.parentNode.replaceChild(frag, n);
+      } else if (n.nodeType === 1) { wrap(n); }
+    });
+  })(title.querySelector('.typed'));
+  var cur = document.createElement('span'); cur.className = 'cur'; cur.setAttribute('aria-hidden', 'true');
+  chars[0].parentNode.insertBefore(cur, chars[0]);
   q.classList.add('anim');
+  function type() {
+    var i = 0;
+    (function next() {
+      if (i >= chars.length) {
+        setTimeout(function () { q.classList.add('in'); }, 250);
+        setTimeout(function () { cur.classList.add('gone'); }, 3600);
+        return;
+      }
+      var c = chars[i]; c.classList.add('on'); c.parentNode.insertBefore(cur, c.nextSibling); i++;
+      setTimeout(next, c.textContent === ' ' ? 130 : 75);
+    })();
+  }
   new IntersectionObserver(function (es, o) {
-    es.forEach(function (e) { if (e.isIntersecting) { q.classList.add('in'); o.disconnect(); } });
+    es.forEach(function (e) { if (e.isIntersecting) { o.disconnect(); setTimeout(type, 450); } });
   }, { threshold: 0.35 }).observe(q);
 })();
 </script>

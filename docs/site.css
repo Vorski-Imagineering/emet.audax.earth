@@ -375,6 +375,8 @@ a.social-link:hover, a.social-link:focus-visible { color: #d98657; border-color:
 }
 .post-hero-img .photo-mark { border-radius: 6px; }
 .post-hero-img .photo-mark::after { background-size: clamp(100px, 14%, 180px) auto, auto; }
+.video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; margin: 2rem 0; background: #11140f; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .card.featured .photo-mark { height: 100%; }
 .card.featured .photo-mark img { height: 100%; }
 

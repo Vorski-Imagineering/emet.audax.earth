@@ -135,6 +135,49 @@
   @media (prefers-reduced-motion: reduce) {
     .mv-quote.anim .mark, .mv-quote.anim .w, .mv-quote.anim figcaption { opacity: 1; transform: none; transition: none; }
   }
+  /* Lead statement at the top of the light section: title words rise in, a clay
+     line draws under "Between Us", then subtitle, text and positioning follow */
+  .mv-lead { max-width: 52rem; margin: 0 auto; text-align: center; }
+  .mv .lead-title {
+    font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; color: #1c211d;
+    font-size: clamp(2.6rem, 6.5vw, 4.6rem); line-height: 1.05; letter-spacing: -0.01em; margin: 0;
+  }
+  .lead-title .between { position: relative; display: inline-block; color: #c1673f; }
+  .lead-title .ink {
+    position: absolute; left: 0; right: 0; bottom: -0.12em; height: 3px; background: #c1673f;
+    transform: scaleX(1); transform-origin: left center;
+  }
+  .lead-sub {
+    font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400;
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.35; color: #2c332c; margin: 1.6rem 0 0;
+  }
+  .lead-body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+    line-height: 1.7; color: #4c5e4f; max-width: 40rem; margin: 1.5rem auto 0;
+  }
+  .lead-position {
+    max-width: 40rem; margin: 2.5rem auto 0; padding: 1.5rem 0 0; border-top: 2px solid #c1673f;
+  }
+  .lead-position .mv-label { margin: 0 0 .75rem; }
+  .lead-position p:last-child {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+    line-height: 1.7; color: #2c332c; margin: 0;
+  }
+  .mv-lead.anim .w, .mv-lead.anim .lead-sub, .mv-lead.anim .lead-body, .mv-lead.anim .lead-position {
+    opacity: 0; transform: translateY(0.7rem);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1);
+  }
+  .mv-lead.anim .w { display: inline-block; transform: translateY(0.5em); }
+  .mv-lead.anim .ink { transform: scaleX(0); transition: transform .9s cubic-bezier(.6,0,.2,1) 1.05s; }
+  .mv-lead.anim .lead-sub { transition-delay: 1.5s; }
+  .mv-lead.anim .lead-body { transition-delay: 1.85s; }
+  .mv-lead.anim .lead-position { transition-delay: 2.2s; }
+  .mv-lead.anim.in .w, .mv-lead.anim.in .lead-sub, .mv-lead.anim.in .lead-body, .mv-lead.anim.in .lead-position { opacity: 1; transform: none; }
+  .mv-lead.anim.in .ink { transform: scaleX(1); }
+  @media (prefers-reduced-motion: reduce) {
+    .mv-lead.anim .w, .mv-lead.anim .lead-sub, .mv-lead.anim .lead-body, .mv-lead.anim .lead-position, .mv-lead.anim .ink { opacity: 1; transform: none; transition: none; }
+  }
+  @media (max-width: 760px) { .mv-lead { text-align: left; } .lead-body, .lead-position { margin-left: 0; } }
   /* Vision to mission as a path: 01 where we are going -> 02 how we get there */
   .mv-path .mv-item { border-top: 0; padding-top: 0; }
   .mv-path .mv-label { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.4rem; }
@@ -271,11 +314,15 @@
 </section>
 <section class="mv" aria-label="Vision and mission">
   <div class="mv-inner">
-    <figure class="mv-quote">
-      <span class="mark" aria-hidden="true">&ldquo;</span>
-      <blockquote>The resulting partnership will think as no human brain has ever thought.</blockquote>
-      <figcaption><strong>J.C.R. Licklider</strong>Man-Computer Symbiosis, 1960</figcaption>
-    </figure>
+    <div class="mv-lead">
+      <h2 class="lead-title"><span class="w">The</span> <span class="w">Intelligence</span> <span class="between"><span class="w">Between</span> <span class="w">Us.</span><span class="ink" aria-hidden="true"></span></span></h2>
+      <p class="lead-sub">Building the next generation of empathic human&ndash;AI teams.</p>
+      <p class="lead-body">We help organizations transform how people and AI agents collaborate &mdash; developing shared understanding, collective intelligence, and the capacity to grow together.</p>
+      <div class="lead-position">
+        <p class="mv-label">Strategic positioning</p>
+        <p>We are not trying to make AI more human. We are trying to make human&ndash;AI collaboration more empathic.</p>
+      </div>
+    </div>
     <div class="mv-text mv-path">
     <article class="mv-item">
       <p class="mv-label"><span class="step">01</span>Where we are going</p>
@@ -445,14 +492,9 @@
 <script src="site.js?v=greybar"></script>
 <script>
 (function () {
-  var q = document.querySelector('.mv-quote');
+  var q = document.querySelector('.mv-lead');
   if (!q || !('IntersectionObserver' in window)) return;
-  var bq = q.querySelector('blockquote');
-  var words = bq.textContent.trim().split(/\s+/);
-  bq.innerHTML = words.map(function (w, i) {
-    return '<span class="w" style="transition-delay:' + (0.25 + i * 0.09).toFixed(2) + 's">' + w + '</span>';
-  }).join(' ');
-  q.querySelector('figcaption').style.transitionDelay = (0.45 + words.length * 0.09).toFixed(2) + 's';
+  q.querySelectorAll('.lead-title .w').forEach(function (w, i) { w.style.transitionDelay = (0.2 + i * 0.16).toFixed(2) + 's'; });
   q.classList.add('anim');
   new IntersectionObserver(function (es, o) {
     es.forEach(function (e) { if (e.isIntersecting) { q.classList.add('in'); o.disconnect(); } });

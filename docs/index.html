@@ -212,6 +212,8 @@
   .mv-path .mv-item:last-child .step { background: #d98657; border-color: #d98657; color: #1c211d; }
   .mv-path .mv-item:last-child h2 { color: #eef0e9; }
   .mv-path .mv-item:last-child .body { color: #c9d3c9; }
+  /* Vision and mission questions: clear serif headings, no step numbers */
+  .mv-path .mv-q { font-size: clamp(1.8rem, 3.4vw, 2.4rem); line-height: 1.15; margin: 0 0 1.1rem; padding-bottom: 1rem; border-bottom: 2px solid #c1673f; display: inline-block; }
   .mv-link .line { background: #c1673f; height: 2px !important; }
   .mv-link .head { border-width: 2px !important; }
   @media (min-width: 761px) {
@@ -323,12 +325,12 @@
     </div>
     <div class="mv-text mv-path">
     <article class="mv-item">
-      <p class="mv-label"><span class="step">01</span>Where we are going?</p>
+      <h2 class="mv-q">Where are we going?</h2>
       <p class="body">We envision a world where humans and AI agents collaborate as trusted partners, with empathy at the heart of how teams and organizations work. A new generation of human&ndash;AI teams that learn together, build on their collective intelligence, and create meaningful value for their members, their organizations, and society.</p>
     </article>
     <div class="mv-link" aria-hidden="true"><span class="line"></span><span class="head"></span></div>
     <article class="mv-item">
-      <p class="mv-label"><span class="step">02</span>How we get there?</p>
+      <h2 class="mv-q">How we get there?</h2>
       <p class="body">We help organizations evolve toward empathic human&ndash;AI collaboration. Starting with consulting services, we work alongside teams to clarify their shared purpose, strengthen collaboration, and discover where AI can create meaningful value. Building on this experience, we are developing a technological foundation for AI agents that become active members of teams &mdash; helping people preserve context, align around goals, recognize contributions, and grow together.</p>
     </article>
     </div>

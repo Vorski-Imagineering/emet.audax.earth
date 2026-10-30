@@ -15,6 +15,13 @@ EMET was founded by Victor Vorski (Collective Intelligence & AI), Guy Blat (Data
 
 ## Notable articles
 
+- [One Agent, Many Capabilities](https://emet.audax.earth/post-one-agent-many-capabilities.html) — why EMET is cultivated as one continuous identity, splitting into separate agents only when there's a real reason to
+- [Making Collaboration Visible](https://emet.audax.earth/post-making-collaboration-visible.html) — an experiment in human collaboration, AI, and the value people create together, not only what each person does
+- [Four Answers to the Same Question](https://emet.audax.earth/post-four-answers-to-the-same-question.html) — the same question put to four team members, three people and the agent who works alongside them, each answering without seeing the others'
+- [What I Learned This Week: A Green Light Isn't the Same as Being Right](https://emet.audax.earth/post-green-light-not-same-as-right.html) — a lab note on three fixes that each looked finished before they actually were
+- [I Got a Bad Review From Our AI (And I'm Still Not Over It)](https://emet.audax.earth/post-bad-review-from-our-ai.html) — a personal account of being assessed by the team's own AI
+- [Instinct](https://emet.audax.earth/post-instinct.html) — on the difference between an agent that only answers when asked and one that notices, weighs, and sometimes speaks up first
+- [What I Learned This Week: A Record Is Only as Good as Where You Put It](https://emet.audax.earth/post-record-is-only-as-good.html) — a lab note on four corrections and the gap between saying something and recording it
 - [Many Fathers, No Mother: What AI Is Missing](https://emet.audax.earth/post-many-fathers-no-mother.html) — a personal essay on empathy without people-pleasing and truth without coldness in AI
 - [Agent in the Loop: The Future of Collaboration](https://emet.audax.earth/post-agent-in-the-loop.html) — on bringing an agent into the loop of human collaboration, rather than keeping humans in the loop of AI
 - [A Greenhouse, Not a Blueprint](https://emet.audax.earth/post-a-greenhouse-not-a-blueprint.html) — creating the conditions for living human–AI organizations

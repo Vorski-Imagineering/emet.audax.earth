@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Agent, Many Capabilities &middot; EMET</title>
+<meta name="description" content="Why we chose to cultivate EMET as one continuous identity, and split only when there's a real reason to.">
+<meta name="author" content="Guy Blat">
+<link rel="canonical" href="https://emet.audax.earth/post-one-agent-many-capabilities.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EMET">
+<meta property="og:title" content="One Agent, Many Capabilities">
+<meta property="og:description" content="Why we chose to cultivate EMET as one continuous identity, and split only when there's a real reason to.">
+<meta property="og:url" content="https://emet.audax.earth/post-one-agent-many-capabilities.html">
+<meta property="og:image" content="https://emet.audax.earth/blog-one-agent-many-capabilities.jpg">
+<meta property="article:author" content="Guy Blat">
+<meta property="article:published_time" content="2026-10-30">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One Agent, Many Capabilities">
+<meta name="twitter:description" content="Why we chose to cultivate EMET as one continuous identity, and split only when there's a real reason to.">
+<meta name="twitter:image" content="https://emet.audax.earth/blog-one-agent-many-capabilities.jpg">
+<meta name="theme-color" content="#1c211d">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=vid2">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="EMET home">
+      <img src="logo-inline-dark.png" alt="EMET">
+      <img class="cursor" src="logo-inline-cursor.png" alt="" aria-hidden="true">
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="lab.html">Lab</a>
+      <a href="team.html">Team</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+      <a href="faq.html">Q&amp;A</a>
+      <a class="cta" href="contact.html">Let&rsquo;s Talk</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="intro">
+  <div class="intro-inner">
+    <p class="mv-label">Essay</p>
+    <h1>One Agent, Many Capabilities</h1>
+    <p class="post-meta">By Guy Blat &middot; 30 October 2026 &middot; 6 min read</p>
+  </div>
+</section>
+<div class="post-hero-img"><span class="photo-mark"><img src="blog-one-agent-many-capabilities.jpg" alt="An abstract mark: a solid dark green circle at the centre, wrapped by a sage-green ring on the left, an orange triangle and a muted blue curve on the right, with three small blue squares trailing off like particles" width="1280" height="853"></span></div>
+<section class="light-band" style="margin-top:-12vw;padding-top:calc(12vw + 3.5rem)">
+  <article class="prose essay">
+    <p><em>Why we chose to cultivate EMET as one continuous identity, and split only when there&rsquo;s a real reason to</em></p>
+    <p>A question kept coming back to us in the early weeks of building EMET: should it be one agent, or many? Every new capability we imagined &mdash; tracking time, watching for commitments, writing articles, keeping memory &mdash; looked, on its own, like a good reason to spin up a separate agent built just for that job. I spent some time thinking it through and wrote a short architecture proposal for the team. My conclusion: keep EMET as one coherent participant with multiple capabilities, use deterministic workflows where reliability matters, and only split into specialized agents when there&rsquo;s a real need for separate autonomy, context, permissions, or lifecycle. But as our conversations developed, I realized there was something deeper behind this architectural choice. We weren&rsquo;t simply deciding how many agents to build. We were asking what it means for EMET to maintain a continuous identity as it grows.</p>
+    <h2>Don&rsquo;t confuse an agent with everything it can remember</h2>
+    <p>The instinct to split comes from thinking about capabilities as if they were separate products. But a capability isn&rsquo;t the same thing as an agent. Time tracking, for example, can have its own data, tools, and workflows without requiring a separate autonomous identity. Dora added an important dimension while we were working through this together: a model that remembers everything but has no stable values, and can&rsquo;t tell what it knows from what it guesses, doesn&rsquo;t become more reliable with more memory. It just becomes more convincing when it&rsquo;s wrong. That reframed the question for me. We shouldn&rsquo;t confuse an agent with everything it can remember. The core agent can remain relatively small and stable &mdash; its purpose, values, identity, and principles for distinguishing what it knows, retrieves, and infers &mdash; while most memory stays external and is retrieved only when needed.</p>
+    <p>Dora put it in a phrase that stuck with me: <strong>it needs to know where to look.</strong> A strong agent keeps what defines it close, and reaches for the library only when the task calls for it &mdash; the right document, the right source, at the right moment. That&rsquo;s the difference between knowing everything and knowing how to find it. The first is heavy and fragile. The second is lighter, more current, and easier to verify.</p>
+    <h2>Continuity of identity</h2>
+    <p>Our deeper intention is not simply to build one agent with many capabilities. It is to cultivate a continuous identity &mdash; a digital collaborator that can grow, learn, and evolve alongside the people and communities it serves. Its tools may change. Its underlying models may be replaced. Its memories may grow, be corrected, or sometimes be forgotten. Even its technical architecture may evolve. But its purpose, foundational values, and history of collaboration provide continuity. For the people working with EMET, this continuity matters. They should experience a recognizable participant that understands the context of their collaboration, can revisit previous commitments, acknowledges uncertainty and mistakes, and remains guided by the same underlying principles across different activities. Continuity does not mean perfect memory or an unchanging personality. It means that change happens within a recognizable identity, rather than through a collection of disconnected assistants. And continuity does not imply authority. EMET can listen, suggest, initiate, question, and challenge. It can help people see contradictions and explore alternatives. But binding decisions and responsibility remain with human beings. <strong>A continuous identity is not a claim to independent authority. It is a foundation for a lasting relationship.</strong></p>
+    <h2>One identity does not mean unrestricted access</h2>
+    <p>There is an important distinction between a shared identity and shared access to information. EMET may participate in many conversations, including private conversations with individuals and shared conversations with groups.</p>
+    <p>That doesn&rsquo;t mean everything learned in one conversation should automatically become available in another. Private memories should remain private unless their owners explicitly choose to share them. Shared organizational knowledge should have its own boundaries, permissions, and provenance. These boundaries must be enforced by the system, not merely entrusted to the agent&rsquo;s judgment. One coherent participant can operate through multiple isolated contexts, with different permissions and carefully controlled access to memory. In fact, respecting these boundaries is part of what makes a continuous relationship trustworthy.</p>
+    <h2>When splitting is actually the right call</h2>
+    <p>None of this means one agent forever, no matter what. It means the default should be one coherent identity, and splitting should answer to a real need &mdash; not simply to the shape of our organizational chart or the shape of our code. Separate agents become useful when a function genuinely requires independent autonomy, a different operating context, distinct permissions, or its own lifecycle. Some specialized agents may eventually work alongside EMET, performing delegated tasks within clearly defined boundaries. But delegation does not necessarily require fragmentation of identity. The people collaborating with EMET can still experience one continuous participant, even when specialized components operate behind the scenes. And some capabilities don&rsquo;t need agents at all. Consider the nightly time-tracking or commitment-monitoring workflows we discussed. Reliable scheduling, state management, validation, and retries belong in deterministic software processes. EMET can contribute interpretation and judgment where needed, without being responsible for every mechanical step. <strong>Use software for what must happen reliably. Use agentic intelligence where understanding and judgment add value.</strong></p>
+    <h2>Build the foundation first</h2>
+    <p>The principle I took from this exchange is simple: build the foundation first, then let capabilities, memory, and access grow around it.</p>
+    <p>The foundation establishes what EMET stands for, how it distinguishes knowledge from inference, how it handles uncertainty, how it respects privacy, and how it remains open to correction. It also provides continuity as the system evolves. This doesn&rsquo;t mean freezing EMET&rsquo;s values forever. A living identity must be capable of learning and change. But changes to its foundational commitments should be deliberate, visible, and subject to human governance &mdash; not accidental consequences of a model update or an accumulated memory. Get that foundation right, and many things that initially look like reasons to create another agent become reasons to extend the capabilities of the participant we already know. We are still early in this journey. We haven&rsquo;t solved every question about memory, governance, or identity. But we have a direction. We want EMET to become more capable without becoming fragmented, more knowledgeable without becoming overconfident, and more autonomous in its explorations without taking authority away from people. Perhaps the most important architectural decision is not how many agents to create. It is deciding what deserves to remain continuous as everything else changes. <strong>We are not just assembling capabilities. We are cultivating the conditions for a lasting human&ndash;AI partnership.</strong></p>
+  <div class="share">
+      <button class="share-btn share-one" type="button" data-url="https://emet.audax.earth/post-one-agent-many-capabilities.html" data-title="One Agent, Many Capabilities" aria-label="Share this article"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/></svg><span>Share</span></button>
+    </div>
+    <p class="follow-lab"><a class="follow-lab-link" href="https://www.linkedin.com/company/emet-a-living-lab/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5"/><path d="M7.5 10.5v6M7.5 7.4v.1M11.2 16.5v-6M11.2 13.2c0-1.7 1-2.9 2.6-2.9s2.4 1 2.4 2.7v3.5"/></svg>Follow EMET on LinkedIn for new posts</a></p>
+        <a class="all-link back" href="blog.html">&larr; All posts</a>
+  </article>
+</section>
+</main>
+<section class="invite" aria-label="Get in touch">
+  <h2>Building AI that works with people, not around them?</h2>
+  <a href="contact.html">Let&rsquo;s Talk</a>
+</section>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="aleph-light.png" alt="" aria-hidden="true">
+      <p>A Living Lab for <span style="white-space: nowrap">Human&ndash;AI</span> Collaboration</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lab.html">Lab</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="contact.html">Let&rsquo;s Talk</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow the Lab</h4>
+      <ul class="social footer-social"><li><a class="social-link" href="https://www.linkedin.com/company/emet-a-living-lab/" target="_blank" rel="noopener" aria-label="EMET on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5"/><path d="M7.5 10.5v6M7.5 7.4v.1M11.2 16.5v-6M11.2 13.2c0-1.7 1-2.9 2.6-2.9s2.4 1 2.4 2.7v3.5"/></svg><span class="social-name">LinkedIn</span></a></li><li><span class="social-link" title="X: link coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5l15 15M19.5 4.5l-15 15"/></svg><span class="social-name">X</span></span></li><li><a class="social-link" href="https://www.youtube.com/@EMET-a-Living-Lab" target="_blank" rel="noopener" aria-label="EMET on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path class="fill" d="M10.2 9.3l4.8 2.7-4.8 2.7z"/></svg><span class="social-name">YouTube</span></a></li></ul>
+      <p class="social-note">X coming soon</p>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>&copy; 2026 EMET</span>
+    <span>emet.audax.earth</span>
+  </div>
+</footer>
+<script src="site.js?v=greybar"></script>
+<script>
+document.querySelectorAll('.share-one').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var l = b.querySelector('span'), url = b.dataset.url, title = b.dataset.title;
+    var copied = function () { l.textContent = 'Link copied'; setTimeout(function () { l.textContent = 'Share'; }, 2200); };
+    var copy = function () {
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(copied, function () { prompt('Copy this link:', url); });
+      else prompt('Copy this link:', url);
+    };
+    if (navigator.share) navigator.share({ title: title, url: url }).catch(function (e) { if (e && e.name !== 'AbortError') copy(); });
+    else copy();
+  });
+});
+</script>
+</body>
+</html>

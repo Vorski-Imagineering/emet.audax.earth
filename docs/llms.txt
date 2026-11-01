@@ -15,6 +15,8 @@ EMET was founded by Victor Vorski (Collective Intelligence & AI), Guy Blat (Data
 
 ## Notable articles
 
+- [Where the North Star Came From](https://emet.audax.earth/post-where-the-north-star-came-from.html) — how a question about fairly attributing value to contributions led to a process for the team to discover its shared direction together
+- [What I Learned This Week: A Boundary Held Without Thinking Isn't a Boundary at All](https://emet.audax.earth/post-boundary-held-without-thinking.html) — a lab note on the difference between a reflexively correct boundary and one held with genuine engagement
 - [One Agent, Many Capabilities](https://emet.audax.earth/post-one-agent-many-capabilities.html) — why EMET is cultivated as one continuous identity, splitting into separate agents only when there's a real reason to
 - [Making Collaboration Visible](https://emet.audax.earth/post-making-collaboration-visible.html) — an experiment in human collaboration, AI, and the value people create together, not only what each person does
 - [Four Answers to the Same Question](https://emet.audax.earth/post-four-answers-to-the-same-question.html) — the same question put to four team members, three people and the agent who works alongside them, each answering without seeing the others'

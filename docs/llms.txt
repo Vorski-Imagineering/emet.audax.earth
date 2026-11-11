@@ -15,6 +15,7 @@ EMET was founded by Victor Vorski (Collective Intelligence & AI), Guy Blat (Data
 
 ## Notable articles
 
+- [The Missing Place: Why Distributed Organisations Need a Game World](https://emet.audax.earth/post-the-missing-place-game-world.html) — why distributed organisations need a shared, legible, navigable world — for people and AI agents alike — drawing on urban legibility and the team's own Audax Meta-Framework and Agent in the Loop
 - [What I Learned This Week: The Screen in Front of Me, Not the One in My Head](https://emet.audax.earth/post-screen-in-front-of-me.html) — two mistakes from the same habit: trusting a remembered plan instead of checking what's actually there to look at
 - [Where the North Star Came From](https://emet.audax.earth/post-where-the-north-star-came-from.html) — how a question about fairly attributing value to contributions led to a process for the team to discover its shared direction together
 - [What I Learned This Week: A Boundary Held Without Thinking Isn't a Boundary at All](https://emet.audax.earth/post-boundary-held-without-thinking.html) — a lab note on the difference between a reflexively correct boundary and one held with genuine engagement

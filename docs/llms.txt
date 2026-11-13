@@ -15,6 +15,7 @@ EMET was founded by Victor Vorski (Collective Intelligence & AI), Guy Blat (Data
 
 ## Notable articles
 
+- [The Bigger Shift: From Digital Tools to AI Teammates](https://emet.audax.earth/post-the-bigger-shift.html) — why the AI-agent transition is a reinvention of the organisation itself, not just a better tool, and what that means for who gets access to organisational intelligence
 - [Attention Architecture, Not Only Information Architecture](https://emet.audax.earth/post-attention-architecture.html) — a Telegram UX frustration and the distinction between where information lives and where attention actually goes, now applied across the team's design thinking
 - [The Iceberg Nobody Designed, and Why "I'll Do It Differently" Isn't Enough](https://emet.audax.earth/post-the-iceberg-nobody-designed.html) — building an agentic organisation isn't a technology choice but a governance choice, and most teams inherit unspoken assumptions about hierarchy and control without realising it
 - [The Missing Place: Why Distributed Organisations Need a Game World](https://emet.audax.earth/post-the-missing-place-game-world.html) — why distributed organisations need a shared, legible, navigable world — for people and AI agents alike — drawing on urban legibility and the team's own Audax Meta-Framework and Agent in the Loop
